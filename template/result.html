@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Code Checker 결과 보기</title>
+</head>
+<body>
+    <p><h1>Code Checker Result</h1></p>
+    <p><h3>ID: {{ .ID }}</h3></p>
+    <p><h3>Result: {{ .Result }}</h3></p>
+
+    <hr />
+    <p><h3>Source</h3></p>
+    <textarea cols="120%" rows="15" readonly="readonly">{{ .Source }}</textarea>
+    <p><h3>Stdin</h3></p>
+    <textarea cols="120%" rows="8" readonly="readonly">{{ .Stdin }}</textarea>
+
+    {{ range .Results }}
+    <hr />
+    <p><h2>Command</h2></p>
+    <textarea cols="120%" rows="1" readonly="readonly">{{ .Command }}</textarea>
+    <p><h2>Compile</h2></p>
+    <textarea cols="120%" rows="15" readonly="readonly">{{ .Compile }}</textarea>
+    <p><h2>Run</h2></p>
+    <textarea cols="120%" rows="15" readonly="readonly">{{ .Run }}</textarea>
+    {{ end }}
+</body>
+</html>

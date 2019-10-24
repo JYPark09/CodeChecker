@@ -1,0 +1,20 @@
+{
+	"Languages": [
+        {
+            "TypeStr": "C",
+            "Extension": ".c",
+            "CmdLines": [
+                ["gcc", "-Wall", "-Werror", "-o", "out", "source.c"],
+                ["clang", "-Wall", "-Werror", "-o", "out", "source.c"]
+            ]
+        },
+		{
+            "TypeStr": "C++",
+            "Extension": ".cc",
+			"CmdLines": [
+				["g++", "-std=c++98", "-Wall", "-Werror", "-o", "out", "source.cc"],
+				["clang++", "-std=c++98", "-Wall", "-Werror", "-o", "out", "source.cc"]
+			]
+		}
+	]
+}

@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Code Checker</title>
+</head>
+<body>
+    <p><h1>Code Checker</h1></p>
+
+    <form action="run" method="post">
+    <p>언어 선택: 
+    <select name="lang">
+        {{ range .Languages }}
+        <option value="{{ .TypeStr }}">{{ .TypeStr }}</option>
+        {{ end }}
+    </select>
+
+    </p>
+
+    <hr/>
+
+    <p>Source Code</p>
+    <textarea cols="120%" rows="15" name="source"></textarea>
+
+    <p>Stdin</p>
+    <textarea cols="120%" rows="8" name="stdin"></textarea>
+
+    <br /> <br />
+    <input type="submit" />
+    </form>
+</body>
+</html>
